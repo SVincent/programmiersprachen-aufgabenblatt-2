@@ -24,4 +24,9 @@ target_link_libraries(tests
   ${OPENGL_LIBRARIES}
   )
 
+# Build vec2
+add_executable(vec2
+  vec2.cpp
+  )
+add_dependencies(vec2 example tests ${COPY_BINARY})
 
