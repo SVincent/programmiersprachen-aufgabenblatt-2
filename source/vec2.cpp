@@ -1,11 +1,9 @@
 #include "vec2.hpp"
 
-void vec2::vec2(){
-    x = 0;
-    y = 0;
-}
+	Vec2::Vec2() : //constructor with default values
+		x_{ 0 },
+		y_{ 0 } {}
 
-void vec2::vec2(int inpx, int inpy){
-    x = inpx;
-    y = inpy;
-}
+	Vec2::Vec2(float x, float y) : //constructor with assigned values
+		x_{ x },
+		y_{ y } {}
