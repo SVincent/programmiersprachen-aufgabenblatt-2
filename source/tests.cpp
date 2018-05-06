@@ -20,7 +20,7 @@ TEST_CASE("constructor Vec2()", "[d]") {
 	REQUIRE(d.y_ == 0);
 }
 
-// Test for constructor with assigned values
+// Test for constructor with assigned values 
 TEST_CASE("constructor Vec2(x,y)", "[Vec2(x,y)]") {
 	REQUIRE(a1.x_ == Approx(12.88));
 	REQUIRE(a1.y_ == Approx(24.44));
