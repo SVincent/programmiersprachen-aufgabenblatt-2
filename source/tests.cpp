@@ -316,6 +316,7 @@ TEST_CASE("Rectangle, circle" "[Rectangle, circle]") {
 
 	REQUIRE(rect.getMax().x_ == Approx(2.3).epsilon(0.01));
 	REQUIRE(rect.getMin().y_ == Approx(1.1).epsilon(0.01));	
+  REQUIRE(rect.circumference() == Approx(11.4).epsilon(0.01));
 }
 
 

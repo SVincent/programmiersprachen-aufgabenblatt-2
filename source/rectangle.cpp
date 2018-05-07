@@ -28,3 +28,9 @@ void Rectangle::setMax(Vec2 const& vec) {
 void Rectangle::setMin(Vec2 const& vec) {
     min_ = vec;
 }
+
+float Rectangle::circumference() const {
+    float height = max_.y_ - min_.y_;
+	float width = max_.x_ - min_.x_;
+	return 2 * (height + width);
+};

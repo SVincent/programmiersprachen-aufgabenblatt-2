@@ -16,6 +16,9 @@ public:
     void setRadius(float rad);
     void setCenter(Vec2 cen);
 
+    //methods
+    float circumference() const;
+
 private:
 	float radius_;
 	Vec2 center_;

@@ -28,3 +28,7 @@ void Circle::setRadius(float rad) {
 void Circle::setCenter(Vec2 cen) {
     center_ = cen;
 }
+
+float Circle::circumference() const{
+	return (2 * M_PI *radius_);
+};

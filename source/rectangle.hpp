@@ -16,6 +16,9 @@ public:
     void setMax(Vec2 const& vecmax);
     void setMin(Vec2 const& vecmin);
 
+    // methods
+    float circumference() const;
+
 private:
 	Vec2 max_;
 	Vec2 min_;
