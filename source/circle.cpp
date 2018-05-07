@@ -66,7 +66,7 @@ void Circle::draw(Window const& window) {
     window.draw_line(bottomleft.x_+2*radius_, bottomleft.y_+2*radius_, bottomleft.x_+2*radius_, bottomleft.y_, colour_.r_, colour_.g_, colour_.b_);
     window.draw_line(bottomleft.x_+2*radius_, bottomleft.y_, bottomleft.x_, bottomleft.y_, colour_.r_, colour_.g_, colour_.b_);
 };
-	
+
 void Circle::draw(Window const& window, Color const& color) {
 	//bounding box (4 line segments)
 	Vec2 bottomleft;

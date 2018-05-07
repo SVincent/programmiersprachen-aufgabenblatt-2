@@ -54,6 +54,7 @@ void Rectangle::draw(Window const& window){
     window.draw_line(max_.x_, min_.y_, min_.x_, min_.y_, colour_.r_, colour_.g_, colour_.b_);
 };
 
+
 void Rectangle::draw(Window const& window, Color const& color) {
 	window.draw_line(min_.x_, min_.y_, min_.x_, max_.y_, color.r_, color.g_, color.b_);
     window.draw_line(min_.x_, max_.y_, max_.x_, max_.y_, color.r_, color.g_, color.b_);
