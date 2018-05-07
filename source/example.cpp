@@ -2,7 +2,15 @@
 #include <GLFW/glfw3.h>
 #include <utility>
 #include <cmath>
+#include "vec2.hpp"
+#include "rectangle.hpp"
 
+Vec2 vecMax(1, 1);
+Vec2 vecMin(0, 0);
+Vec2 vecCen(0.5, 0.5)
+Rectangle rect(vecMax, vecMin);
+Color col(0.0, 1.0, 0.0);
+Circle circ(0.5, col, vecCen)
 
 int main(int argc, char* argv[])
 {
@@ -12,6 +20,9 @@ int main(int argc, char* argv[])
     if (win.get_key(GLFW_KEY_ESCAPE) == GLFW_PRESS) {
       win.close();
     }
+
+    rect.draw(win, col);
+    circ.draw(win);
 
     bool left_pressed = win.get_mouse_button(GLFW_MOUSE_BUTTON_LEFT) == GLFW_PRESS;
 

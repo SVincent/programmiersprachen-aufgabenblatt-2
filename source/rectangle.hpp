@@ -2,6 +2,7 @@
 #define RECTANGLE_HPP
 #include "vec2.hpp"
 #include "color.hpp"
+#include "window.hpp"
 
 class Rectangle {
 
@@ -22,11 +23,13 @@ public:
 
     // methods
     float circumference() const;
+    void draw(Window const& window);
+	void draw(Window const& window, Color const& color);
 
 private:
 	Vec2 max_;
 	Vec2 min_;
-    Color color_;
+    Color colour_;
 };
 
 #endif
