@@ -24,6 +24,20 @@ int main(int argc, char* argv[])
     rect.draw(win, col);
     circ.draw(win);
 
+    if (rect.is_inside(win.mouse_position())){
+      rect.setColor(0.0, 0.0, 1.0);
+    }
+    else {
+      rect.setColor(col);
+    }
+
+    if (circ.is_inside(win.mouse_position())){
+      circ.setColor(0.0, 0.0, 1.0);
+    }
+    else {
+      circ.setColor(col);
+    }
+
     bool left_pressed = win.get_mouse_button(GLFW_MOUSE_BUTTON_LEFT) == GLFW_PRESS;
 
     auto t = win.get_time();

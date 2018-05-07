@@ -26,6 +26,7 @@ public:
     float circumference() const;
 	void draw(Window const& window);
 	void draw(Window const& window, Color const& color);
+    bool is_inside(Vec2 const& vec);
 
 private:
 	float radius_;

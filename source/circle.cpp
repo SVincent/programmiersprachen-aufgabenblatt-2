@@ -78,3 +78,17 @@ void Circle::draw(Window const& window, Color const& color) {
     window.draw_line(bottomleft.x_+2*radius_, bottomleft.y_+2*radius_, bottomleft.x_+2*radius_, bottomleft.y_, color.r_, color.g_, color.b_);
     window.draw_line(bottomleft.x_+2*radius_, bottomleft.y_, bottomleft.x_, bottomleft.y_, color.r_, color.g_, color.b_);
 };
+
+bool Circle::is_inside(Vec2 const& vec) {
+    //bounding box
+	Vec2 bottomleft;
+	bottomleft.x_ = center_.x_ - radius_;
+	bottomleft.y_ = center_.y_ - radius_;
+
+    if (vec.x_ < bottomleft.x_ || vec.x_ > bottomleft.x_+2*radius_ || vec.y_ < bottomleft.y_ || vec.y_ > bottomleft.y_+2*radius_) {
+        return false;
+    }
+    else {
+        return true;
+    }
+};

@@ -61,3 +61,12 @@ void Rectangle::draw(Window const& window, Color const& color) {
     window.draw_line(max_.x_, max_.y_, max_.x_, min_.y_, color.r_, color.g_, color.b_);
     window.draw_line(max_.x_, min_.y_, min_.x_, min_.y_, color.r_, color.g_, color.b_);
 };
+
+bool Rectangle::is_inside(Vec2 const& vec) {
+    if (vec.x_ < min_.x_ || vec.x_ > max_.x_ || vec.y_ < min_.y_ || vec.y_ > max_.y_) {
+        return false;
+    }
+    else {
+        return true;
+    }
+};
