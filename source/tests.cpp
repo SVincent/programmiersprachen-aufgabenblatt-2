@@ -300,3 +300,26 @@ TEST_CASE("rotation matrix test" "[make_rotation_mat2(float phi)]") {
 	REQUIRE(matRes.n[1][0] == Approx(0.8386).epsilon(0.0001));
 	REQUIRE(matRes.n[1][1] == Approx(-0.5446).epsilon(0.0001));
 }
+
+// Task 2.8
+TEST_CASE("Rectangle, circle" "[Rectangle, circle]") {
+	
+	Circle circle1;
+	Circle circle2(12.34);
+
+	REQUIRE(circle1.getRadius() == Approx(0.0).epsilon(0.01));
+	REQUIRE(circle2.getRadius() == Approx(12.34).epsilon(0.01));
+	
+	Vec2 vec1(2.3, 4.5);
+	Vec2 vec2(0.0, 1.1);
+	class::Rectangle rect(vec1,vec2);
+
+	REQUIRE(rect.getMax().x_ == Approx(2.3).epsilon(0.01));
+	REQUIRE(rect.getMin().y_ == Approx(1.1).epsilon(0.01));	
+}
+
+
+int main(int argc, char *argv[])
+{
+  return Catch::Session().run(argc, argv);
+}
