@@ -34,3 +34,7 @@ float Rectangle::circumference() const {
 	float width = max_.x_ - min_.x_;
 	return 2 * (height + width);
 };
+
+void Rectangle::setColor(Color const& col) {
+	color_ = col;
+};

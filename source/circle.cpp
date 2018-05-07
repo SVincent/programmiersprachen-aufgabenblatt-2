@@ -32,3 +32,11 @@ void Circle::setCenter(Vec2 cen) {
 float Circle::circumference() const{
 	return (2 * M_PI *radius_);
 };
+
+Color Circle::getColor() const {
+	return color_;
+};
+
+void Circle::setColor(Color col) {
+	color_ = col;
+};
